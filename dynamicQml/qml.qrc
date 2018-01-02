@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Singleton/ColorTabs.qml</file>
+        <file>componentCreation.js</file>
+    </qresource>
+</RCC>
