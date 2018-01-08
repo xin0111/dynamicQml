@@ -96,6 +96,13 @@ exports.copyFile = function(src,dest) {
     var writeStream = fs.createWriteStream(dest);
     readStream.pipe(writeStream);
 }
+exports.pushFile = function(src,dest){
+    fs.exists(src, function(exists){
+        if(exists){
+            exports.execCmdSync("adb push " +src+ ' ' +dest);
+        }
+    });
+}
 
 
 String.prototype.replaceAll = function(search, replacement) {
